@@ -601,8 +601,8 @@ const Home: React.FC = () => {
                         engine (Impala with Kudu, Presto, Hive on Tez, Tajo).
                       </WorkItem>
                       <WorkItem>
-                        [5] 2016, 2017 released to G-Star (Korea's largest game
-                        advertising partner B2B conference).
+                        [5] 2016, 2017 released to G-Star (Korea&apos;s largest
+                        game advertising partner B2B conference).
                       </WorkItem>
                     </WorkList>
                   </TableCell>
