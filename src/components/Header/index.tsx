@@ -34,7 +34,7 @@ const Header: React.FC = () => {
       <HeaderInner>
         <HeaderSectionLogo>
           <HeaderLink href="/">
-            <Image height={32} src={Logo} alt="R.MarkAI" />
+            <Image height={32} src={Logo} alt="sungmin.me" />
           </HeaderLink>
         </HeaderSectionLogo>
       </HeaderInner>
