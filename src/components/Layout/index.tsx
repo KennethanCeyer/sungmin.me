@@ -10,6 +10,9 @@ interface LayoutProps {
 const LayoutContainer = styled.main({
   height: "100vh",
   backgroundColor: "#FFFFFF",
+  "@media print": {
+    height: "auto",
+  },
 });
 
 interface BodyStyleProps {
@@ -19,6 +22,9 @@ const Body = styled.div<BodyStyleProps>(({ header }: BodyStyleProps) => ({
   height: header ? "calc(100% - 60px)" : "100vh",
   boxSizing: "border-box",
   overflowY: "auto",
+  "@media print": {
+    overflow: "visible",
+  },
 }));
 const BodyInner = styled.div({
   position: "relative",
@@ -28,6 +34,10 @@ const BodyInner = styled.div({
   padding: "160px 0",
   overflow: "hidden",
   boxSizing: "border-box",
+  "@media print": {
+    width: "100%",
+    padding: 0,
+  },
 });
 
 const Layout: React.FC<LayoutProps> = ({ header = true, children }) => (

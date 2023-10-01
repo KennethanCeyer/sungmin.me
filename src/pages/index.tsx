@@ -6,17 +6,22 @@ const HomeContainer = styled.main({
   display: "flex",
   flexDirection: "column",
   rowGap: 120,
-  fontSize: 16,
+  "@media print": {
+    rowGap: 60,
+  },
 });
 
 const Section = styled.section({
   display: "flex",
   flexDirection: "row",
   columnGap: 20,
+  "@media print": {
+    columnGap: 10,
+  },
 });
 
 const SectionTitle = styled.h1({
-  fontSize: 28,
+  fontSize: "1.75rem",
   margin: 0,
   padding: 0,
   border: 0,
@@ -24,7 +29,7 @@ const SectionTitle = styled.h1({
 });
 
 const SectionHeader = styled.div({
-  minWidth: 280,
+  minWidth: "15rem",
 });
 
 const SectionBody = styled.div({
@@ -32,10 +37,13 @@ const SectionBody = styled.div({
   flex: 1,
   flexDirection: "column",
   rowGap: 40,
+  "@media print": {
+    rowGap: 20,
+  },
 });
 
 const SectionSubTitle = styled.h2({
-  fontSize: 24,
+  fontSize: "1.5rem",
   margin: 0,
   padding: 0,
   border: 0,
@@ -59,9 +67,13 @@ const Table = styled.table({
 const TableBody = styled.tbody({});
 
 const TableRow = styled.tr({
-  verticalAlign: "top",
   "th, td": {
+    verticalAlign: "top",
     paddingBottom: 20,
+    lineHeight: "inherit",
+    "@media print": {
+      paddingBottom: 10,
+    },
   },
   "&:last-child": {
     "th, td": {
@@ -72,11 +84,12 @@ const TableRow = styled.tr({
 
 const TableHeader = styled.th({
   paddingRight: 20,
+  "@media print": {
+    paddingRight: 10,
+  },
 });
 
-const TableCell = styled.td({
-  fontSize: 16,
-});
+const TableCell = styled.td({});
 
 const TextTight = styled.span({
   lineHeight: 1,
@@ -84,7 +97,7 @@ const TextTight = styled.span({
 
 const TextDecoSub = styled.span({
   color: "#aaa",
-  fontSize: 14,
+  fontSize: "0.875rem",
   fontWeight: 400,
 });
 
@@ -92,13 +105,11 @@ const TextDecoLight = styled.span({
   display: "block",
   color: "#555",
   fontWeight: 400,
-  fontSize: 16,
-  marginTop: -4,
 });
 
 const WorkList = styled.ul({
   listStyle: "none",
-  fontSize: 14,
+  fontSize: "0.875rem",
   color: "#555",
   padding: 0,
   margin: 0,
@@ -111,7 +122,7 @@ const WorkItemImportant = styled.span({
 });
 const WorkDetails = styled.div({
   marginTop: 10,
-  fontSize: 14,
+  fontSize: "0.875rem",
   color: "#555",
 });
 
@@ -210,7 +221,7 @@ const Home: React.FC = () => {
             <Table>
               <TableBody>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     <TextTight>
                       <b>Riiid</b>
                       <TextDecoSub>&nbsp;-&nbsp;2.8 years</TextDecoSub>
@@ -223,7 +234,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     <TextTight>
                       <b>Naver Clova</b>
                       <TextDecoSub>&nbsp;-&nbsp;2.5 years</TextDecoSub>
@@ -236,7 +247,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     <TextTight>
                       <b>IGAWorks</b>
                       <TextDecoSub>&nbsp;-&nbsp;2.8 years</TextDecoSub>
@@ -273,13 +284,13 @@ const Home: React.FC = () => {
             <Table>
               <TableBody>
                 <TableRow>
-                  <TableHeader style={{ width: 260 }}>Language</TableHeader>
+                  <TableHeader style={{ width: "15rem" }}>Language</TableHeader>
                   <TableCell>
                     Python, Golang, Typescript, Kotlin, and C#
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 260 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     ML Engineering
                   </TableHeader>
                   <TableCell>
@@ -288,7 +299,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 260 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     Data Engineering
                   </TableHeader>
                   <TableCell>
@@ -303,7 +314,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 260 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     Backend Engineering
                   </TableHeader>
                   <TableCell>
@@ -313,7 +324,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 260 }}>Cloud</TableHeader>
+                  <TableHeader style={{ width: "15rem" }}>Cloud</TableHeader>
                   <TableCell>
                     <ContentItem>AWS, GCP, and Azure</ContentItem>
                     <ContentItem>
@@ -322,7 +333,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 260 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     Infrastructure
                   </TableHeader>
                   <TableCell>
@@ -334,7 +345,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 260 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     Domain knowledge
                   </TableHeader>
                   <TableCell>
@@ -354,14 +365,14 @@ const Home: React.FC = () => {
             <Table>
               <TableBody>
                 <TableRow>
-                  <TableHeader style={{ width: 160 }}>Bachlor</TableHeader>
+                  <TableHeader style={{ width: "10rem" }}>Bachlor</TableHeader>
                   <TableCell>
                     <ContentItem>Soongsil University</ContentItem>
                     <ContentItem>Media (Graphics Programming)</ContentItem>
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 160 }}>Audit</TableHeader>
+                  <TableHeader style={{ width: "10rem" }}>Audit</TableHeader>
                   <TableCell>
                     <ContentItem>
                       Korea Advanced Institute of Science &amp; Technology
@@ -384,15 +395,15 @@ const Home: React.FC = () => {
             <Table>
               <TableBody>
                 <TableRow>
-                  <TableHeader style={{ width: 160 }}>English</TableHeader>
+                  <TableHeader style={{ width: "10rem" }}>English</TableHeader>
                   <TableCell>Upper-intermediate</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 160 }}>Korean</TableHeader>
+                  <TableHeader style={{ width: "10rem" }}>Korean</TableHeader>
                   <TableCell>Native</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 160 }}>Japanese</TableHeader>
+                  <TableHeader style={{ width: "10rem" }}>Japanese</TableHeader>
                   <TableCell>Intermediate</TableCell>
                 </TableRow>
               </TableBody>
@@ -407,7 +418,7 @@ const Home: React.FC = () => {
             <Table>
               <TableBody>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     CCNP Routing
                     <span className="font-normal text-slate-500 ml-2">
                       (Cisco)
@@ -418,7 +429,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     OCJP
                     <span className="font-normal text-slate-500 ml-2">
                       (Oracle)
@@ -429,7 +440,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     CCNA
                     <span className="font-normal text-slate-500 ml-2">
                       (Cisco)
@@ -451,7 +462,7 @@ const Home: React.FC = () => {
             <Table>
               <TableBody>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     <TextTight>
                       <b>Riiid</b>
                       <br />
@@ -518,7 +529,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     <TextTight>
                       <b>Naver Clova</b>
                       <br />
@@ -569,7 +580,7 @@ const Home: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableHeader style={{ width: 240 }}>
+                  <TableHeader style={{ width: "15rem" }}>
                     <TextTight>
                       <b>IGAWorks</b>
                       <br />

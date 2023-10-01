@@ -1,6 +1,10 @@
 import { Global, Interpolation } from "@emotion/react";
 
 const style: Interpolation<Global> = {
+  "@page": {
+    size: "auto",
+    margin: "2cm",
+  },
   "::-moz-selection": {
     color: "#ffffff",
     backgroundColor: "rgba(0, 0, 0, 1)",
@@ -15,10 +19,12 @@ const style: Interpolation<Global> = {
     padding: 0,
     margin: 0,
     fontSize: 16,
-  },
-  html: {
-    fontSize: 18,
     fontSmoothing: "antialiased",
+    "@media print": {
+      width: "210mm",
+      height: "auto",
+      fontSize: 12,
+    },
   },
   body: {
     color: "#000",
